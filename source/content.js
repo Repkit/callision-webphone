@@ -3,9 +3,9 @@ If the click was on a link, send a message to the background page.
 The message contains the link's URL.
 */
 function notifyExtension(e) {
-	const { target } = e;
-	while ((target.tagName !== 'A' || !target.href) && target.parentNode) {
-		target = target.parentNode;
+	let target;
+	while ((e.target.tagName !== 'A' || !e.target.href) && e.target.parentNode) {
+		target = e.target.parentNode;
 	}
 
 	if (target.tagName !== 'A') {
