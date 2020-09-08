@@ -1,16 +1,11 @@
-// eslint-disable-next-line import/no-unassigned-import
-// import './options-storage';
-
 /*
 Log that we received the message.
 Then display a notification. The notification contains the URL,
 which we read from the message.
 */
 function notify(message) {
-
-	console.log("background script received message");
-	var url = message.url;
-	console.log(url);
+	console.log('background script received message');
+	console.log(message.url);
 }
 
 /*
